@@ -1,0 +1,377 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A42FAF6-3D43-433C-B6C5-E4C36EA68FBC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QUANLYPHANKIM</RootNamespace>
+    <AssemblyName>QUANLYPHANKIM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v23.2" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2" />
+    <Reference Include="DevExpress.Data.v23.2" />
+    <Reference Include="DevExpress.Printing.v23.2.Core" />
+    <Reference Include="DevExpress.Utils.v23.2" />
+    <Reference Include="DevExpress.XtraBars.v23.2" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v23.2" />
+    <Reference Include="DevExpress.Drawing.v23.2" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBan.Designer.cs">
+      <DependentUpon>frmBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBangGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBangGia.Designer.cs">
+      <DependentUpon>frmBangGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChotGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChotGia.Designer.cs">
+      <DependentUpon>frmChotGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiTac.Designer.cs">
+      <DependentUpon>frmDoiTac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKho.Designer.cs">
+      <DependentUpon>frmKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoaiVang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoaiVang.Designer.cs">
+      <DependentUpon>frmLoaiVang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainInfo.Designer.cs">
+      <DependentUpon>frmMainInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMua.Designer.cs">
+      <DependentUpon>frmMua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhomDoiTac.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhomDoiTac.Designer.cs">
+      <DependentUpon>frmNhomDoiTac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuayThuNgan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuayThuNgan.Designer.cs">
+      <DependentUpon>frmQuayThuNgan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTraoDoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTraoDoi.Designer.cs">
+      <DependentUpon>frmTraoDoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Libs\Encryptor.cs" />
+    <Compile Include="Libs\GeneralLibs.cs" />
+    <Compile Include="Libs\GeneratorEAN13.cs" />
+    <Compile Include="Libs\Library.cs" />
+    <Compile Include="Libs\PrimaryKeyGenerator.cs" />
+    <Compile Include="Libs\TrangThai.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Popups\frmDoiTac_Popup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Popups\frmDoiTac_Popup.Designer.cs">
+      <DependentUpon>frmDoiTac_Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBan.resx">
+      <DependentUpon>frmBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBangGia.resx">
+      <DependentUpon>frmBangGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChotGia.resx">
+      <DependentUpon>frmChotGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiTac.resx">
+      <DependentUpon>frmDoiTac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKho.resx">
+      <DependentUpon>frmKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoaiVang.resx">
+      <DependentUpon>frmLoaiVang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainInfo.resx">
+      <DependentUpon>frmMainInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMua.resx">
+      <DependentUpon>frmMua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhomDoiTac.resx">
+      <DependentUpon>frmNhomDoiTac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuayThuNgan.resx">
+      <DependentUpon>frmQuayThuNgan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTraoDoi.resx">
+      <DependentUpon>frmTraoDoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Popups\frmDoiTac_Popup.resx">
+      <DependentUpon>frmDoiTac_Popup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="content\net40\App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{aebcb5d4-ccc7-469c-8ef1-bfca1ca4f5e1}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{81d31273-453f-4762-86a7-16448898b5db}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartchangestyle_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boproductgroup_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bosaleitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boorderitem_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\currency_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\convert_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\costanalysis_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbydate_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupbyresource_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectdirectory_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boproduct_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\opportunities_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\financial_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deletelist_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sortgroupfooter_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\converttorange_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sortgroupfooter_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cube_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\functionsfinancial_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\functionsmore_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocontact2_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\encrypt_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bouser_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apply_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removepivotfield_16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0\build\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0\build\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0\build\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.0\build\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.0\build\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.0\build\build\net6.0\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
